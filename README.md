@@ -473,3 +473,55 @@ MIT License - 详见 [LICENSE](LICENSE)
 特别感谢「辉哥」提供的真实业务场景与持续反馈。
 
 如果它帮到了你，给个 ⭐ Star 是最大的鼓励。
+---
+
+## 🛠 CLI 工具：mh (memory-hygiene)
+
+将方法论固化为可执行的代码工具，核心算法为**上下文预算分析**。
+
+### 安装
+
+```bash
+# 直接运行
+python3 bin/mh.py status
+
+# 或安装到系统
+pip install -e .
+mh status
+```
+
+### 命令
+
+| 命令 | 功能 | 示例 |
+|------|------|------|
+| `init` | 初始化工作区目录结构 | `mh init --dir ~/workspace` |
+| `status` | 分析工作区健康状况 | `mh status` |
+| `check` | 检查约束违例 | `mh check --json` |
+| `index` | 更新 _index.md 导航 | `mh index --dir ./trading` |
+| `prune` | 列出可清理的文件 | `mh prune` |
+
+### 核心算法
+
+**Context Budget Analyzer（上下文预算分析算法）**：
+
+1. 扫描工作区所有 `.md` 文件
+2. 按内容类型（中文、英文、代码、表格）估算 token 消耗
+3. 对照方法论铁律（MEMORY.md ≤100行、日记 ≤30行等）逐条检查约束
+4. 计算 0-100 健康评分
+5. 生成优先级排序的优化建议
+
+输出示例：
+
+```
+📊 健康评分: 71/100
+    [█████████████████████░░░░░░░░░]
+
+📝 Token 预算:
+    MEMORY.md:          1,455 tokens
+    memory/ 日记目录:  22,782 tokens
+    _index.md 导航:       420 tokens
+
+⚠️ 发现 3 个问题:
+    🟡 memory/2026-07-03.md 行数 56 超过 30 行上限
+    🟡 目录 skills/ 缺少 _index.md
+```
