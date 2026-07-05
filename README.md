@@ -1,12 +1,15 @@
 # AI Memory Hygiene · 让 AI 记忆清爽不臃肿
 
-> 一套面向 AI 助手重度用户（OpenClaw / Claude Code / Cursor / Cherry Studio 等）的
-> 知识管理方法论，解决「AI 记忆越长越乱、找不到最新状态、不同任务数据混杂」的痛点。
+> **AI 助手记忆领域的“韬定律”** —— 当上下文堆叠逼近极限，我们不再追加信息容量，而是优化信息被检索的时间。
+
+面向 AI 助手重度用户（OpenClaw / Claude Code / Cursor / Cherry Studio 等）的知识管理方法论。
+解决「AI 记忆越长越乱、找不到最新状态、不同任务数据混杂」的痛点。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![中文](https://img.shields.io/badge/lang-中文-red.svg)](README.md)
 [![English](https://img.shields.io/badge/lang-English-blue.svg)](README_EN.md)
 [![Compute Saved: 95%+](https://img.shields.io/badge/Compute_Saved-95%25+-green.svg)](WHY.md)
+[![Inspired by: 韬(τ)定律](https://img.shields.io/badge/Inspired_by-韬(τ)定律-blue.svg)](https://www.huawei.com/cn/news/2026/5/ieee-iscas-tau-scaling)
 
 ---
 
@@ -14,6 +17,13 @@
 
 如果说这套方法论只解决「整齐」问题，那就是个普通文件管理技巧。
 实际上它解决的是 **AI 应用的算力焦虑**。
+
+### 📌 韬定律的启发
+
+2026 年 5 月，华为何庭波提出韬（τ）定律，本质是 **STCO（System Technology Co-Optimization）** 方法论的具体演进——当晶体管几何缩微逼近极限，不再追求尺寸缩小，而是系统性压缩信号传播的时间常数（τ）。
+
+本方法论与韬定律同构：面对 LLM 上下文堆叠的极限，我们不再追加信息容量，而是**优化信息被检索的时间**。
+从 “信息-系统协同优化” （Information-System Co-Optimization）这一一般范式看，两个领域共享同一思想内核——**放弃单一维度的资源堆叠，转向多层级协同优化**。
 
 ### 问题现状
 
